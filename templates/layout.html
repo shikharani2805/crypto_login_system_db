@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ {% block head %}
+
+ <title>{% block title %}{% endblock %}</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ <!-- <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+
+ <style>
+
+.shadow{
+    text-shadow: 2px 2px 5px red;
+    text-align: center;
+}
+
+
+.right {
+    position: absolute;
+    right: 50px;
+    top: 0px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+
+
+
+  .head {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+
+
+
+  div.ex1 {
+  /* height: 200px; */
+  /* width: 1800px; */
+  margin: auto;
+  /* border: 3px solid #121312; */
+}
+
+
+
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url({{ url_for('static', filename='img1.jpg') }});
+
+  min-height: 660px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Add styles to the form container */
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 440px;
+  padding: 40px;
+  top: 70px;
+  right: 550px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0 30px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+
+
+  </style>
+
+
+
+ {% endblock %}
+</head>
+<div class="ex1">
+
+<body style="background-color:rgb(180, 159, 236);">
+
+
+<div class="navbar">
+ <ul class="head">
+
+  <li><a href="/"><i class="fa fa-fw fa-home"></i>Home</a></li>
+  <li><a href="login"><i class="fa fa-fw fa-user"></i>Login</a></li>
+  <li><a href="sign_up"><i class="fa fa-fw fa-user"></i>Sign Up</a></li>
+
+     <div class = "right">
+        <li align="right" ><a href="/">Back</a></li>
+     </div>
+</ul>
+</div>
+</div>
+
+{% block body %} {% endblock %}
+
+</body>
+</html>
